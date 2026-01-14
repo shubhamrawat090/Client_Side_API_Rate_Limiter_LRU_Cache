@@ -1,0 +1,8 @@
+BUGS
+- it shows next to evict always. It should ideally only show when minimum MAX_SIZE(4) entries are in the LRU Storage View.
+- There is some isDone() function there which sets status pending or completed. I don't want that use API's isCompleted only.
+
+
+IMPROVEMENTS
+- Add Dark/Light Mode
+- We can click an item on the LRU Storage view list and it opens a wider view. This calls the get function and make the item MRU.
