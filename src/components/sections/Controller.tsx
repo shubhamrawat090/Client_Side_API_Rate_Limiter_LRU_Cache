@@ -8,18 +8,24 @@ type ControllerProps = {
 const Controller = ({ onFetchRandom, isRateLimited }: ControllerProps) => {
   return (
     <div>
-      <h3>Controller</h3>
+      <div className="mb-4 flex items-center gap-2">
+        <span className="text-emerald-300">🎛️</span>
+        <h3 className="text-lg font-semibold text-slate-100">Controller</h3>
+      </div>
+
       <button
-        className="px-4 py-2 border border-gray-400 rounded-md text-sm hover:bg-gray-100 active:bg-gray-200 transition"
+        className="cursor-pointer w-full rounded-xl bg-emerald-500 px-4 py-3 text-sm font-semibold text-slate-950 shadow-sm hover:bg-emerald-400 active:bg-emerald-600 transition disabled:cursor-not-allowed disabled:opacity-50"
         onClick={onFetchRandom}
         disabled={isRateLimited}
       >
-        Fetch Random
+        ⚡ Fetch Random
       </button>
 
-      {isRateLimited && (
-        <p style={{ marginTop: "8px" }}>Rate limit exceeded. Please wait.</p>
-      )}
+      <p className="mt-3 text-xs text-slate-400">
+        {isRateLimited
+          ? "Rate limit exceeded. Waiting for a slot to refill..."
+          : "Click to simulate an API call and store it in the LRU cache."}
+      </p>
     </div>
   );
 };
