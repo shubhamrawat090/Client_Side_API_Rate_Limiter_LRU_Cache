@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import type { CapacitySlot } from "../../hooks/useRateLimiterSlots";
 
 type CapacityWindowProps = {
@@ -67,7 +67,7 @@ const CapacityWindow = ({
 
             progress = Math.min(
               100,
-              Math.max(0, ((totalMs - remainingMs) / totalMs) * 100)
+              Math.max(0, ((totalMs - remainingMs) / totalMs) * 100),
             );
 
             secondsLeft = Math.ceil(remainingMs / 1000);

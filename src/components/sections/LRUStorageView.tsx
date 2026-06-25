@@ -1,4 +1,3 @@
-import React from "react";
 import type { CacheViewItem } from "../../hooks/useLRUCacheView";
 
 type LRUStorageViewProps = {

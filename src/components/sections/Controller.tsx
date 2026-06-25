@@ -1,5 +1,3 @@
-import React from "react";
-
 type ControllerProps = {
   onFetchRandom: () => void;
   isRateLimited: boolean;
