@@ -91,7 +91,7 @@ const LRUStorageView = ({ items, maxSize }: LRUStorageViewProps) => {
                     </span>
                   )}
 
-                  {item.isLRU && (
+                  {item.isLRU && items.length === maxSize && (
                     <span className="rounded-md bg-rose-500/15 px-2 py-1 text-center text-[10px] font-semibold text-rose-300">
                       LRU (NEXT TO EVICT)
                     </span>
